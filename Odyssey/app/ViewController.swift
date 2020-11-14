@@ -48,6 +48,13 @@ class ViewController: UIViewController, ElectraUI {
     
     private var currentView: (UIView & PanelView)?
 
+    private func isSupported() {
+        if #available(iOS 13.6, *) return false
+        if #available(iOS 13.5.5, *) return true
+        if #available(iOS 13.5.1, *) return false
+        return #available(iOS 13.0, *)
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -76,8 +83,8 @@ class ViewController: UIViewController, ElectraUI {
         var formatter = UICircularProgressRingFormatter()
         formatter.showValueInteger = false
         formatter.valueIndicator = "Jailbreak"
-        
-        if #available(iOS 13.5.1, *) {
+
+        if !isSupported() {
             jailbreakButton?.isEnabled = false
             formatter.valueIndicator = "Unsupported"
             if let allProcStr = UIPasteboard.general.string {
@@ -268,10 +275,10 @@ class ViewController: UIViewController, ElectraUI {
                     tfpzero = tfp0
                     any_proc = rk64(self.allProc)
                 } else {
-                    if #available(iOS 13.5.1, *) {
+                    if !isSupported() {
                         fatalError("Unable to get tfp0")
                     } else if #available(iOS 13.3.1, *) {
-                        print("Selecting tardy0n for iOS 13.4 -> 13.5 (+ 13.5.5b1)")
+                        print("Selecting tardy0n for iOS 13.3.1 -> 13.5 (+ 13.5.5b1)")
                         tardy0n()
                         tfpzero = getTaskPort()
                         tfp0 = tfpzero
