@@ -150,6 +150,7 @@ class BridgePairingViewController: UIViewController {
                                     let bridge = self.discoveredBridges[index]
                                     self.discoveredBridges[index].displayName = "Paired : \(bridge.ip!)"
                                     self.discoveredBridges[index].paired = true
+                                    LightManager.shared.grabLightsFromBridge()
                                     self.tableView.reloadData()
                                 } else {
                                     self.errorWith(PairingError.bridgeError.error)

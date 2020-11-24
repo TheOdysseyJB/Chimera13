@@ -73,6 +73,7 @@ class LightManager {
             if let url = URL(string: "http://\(bridge.ip!)/api/\(bridge.username!)/lights") {
                 NetworkManager.shared.requestWithDict(url: url, method: "GET", headers: nil, jsonbody: nil, completion: { (success, dict) -> Void in
                     if success {
+                        print("[i] Refreshed light cache")
                         for (id, uwu) in dict {
                             if let light = uwu as? [String : Any] {
                                 let type = light["type"] as? String ?? "Error"
@@ -136,7 +137,8 @@ class LightManager {
                         
                         for response in dict {
                             if (response["success"] as? [String : Any]) != nil {
-                                self.grabLightsFromBridge()
+                                //self.grabLightsFromBridge()
+                                //This isn't needed here
                             } else {
                                 generator.notificationOccurred(.error); return
                             }

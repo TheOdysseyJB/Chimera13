@@ -124,14 +124,10 @@ class ViewController: UIViewController, ElectraUI {
         
         NotificationCenter.default.addObserver(self, selector: #selector(updateTheme), name: ThemesManager.themeChangeNotification, object: nil)
         self.updateTheme()
+        LightManager.shared.grabLightsFromBridge()
         // Do any additional setup after loading the view.
     }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        LightManager.shared.grabLightsFromBridge()
-    }
-    
+
     @objc func updateTheme() {
         let custom = UserDefaults.standard.string(forKey: "theme") == "custom"
         let customColour = UserDefaults.standard.string(forKey: "theme") == "customColourTheme"
