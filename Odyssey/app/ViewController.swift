@@ -127,6 +127,11 @@ class ViewController: UIViewController, ElectraUI {
         // Do any additional setup after loading the view.
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        LightManager.shared.grabLightsFromBridge()
+    }
+    
     @objc func updateTheme() {
         let custom = UserDefaults.standard.string(forKey: "theme") == "custom"
         let customColour = UserDefaults.standard.string(forKey: "theme") == "customColourTheme"

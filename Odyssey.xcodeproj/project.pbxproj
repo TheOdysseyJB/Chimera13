@@ -33,6 +33,15 @@
 		5310399225041BB400CADF5C /* ThemeImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5310399025041BB400CADF5C /* ThemeImagePicker.swift */; };
 		531039962504F59800CADF5C /* AlderisButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 531039952504F59800CADF5C /* AlderisButton.swift */; };
 		531039972504F59800CADF5C /* AlderisButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 531039952504F59800CADF5C /* AlderisButton.swift */; };
+		53179051256D89D2003AAB0D /* NSNotification+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5317904B256D89D1003AAB0D /* NSNotification+Extensions.swift */; };
+		53D155C8256D7CB600A86063 /* LightManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53D155C1256D7CB400A86063 /* LightManager.swift */; };
+		53D155C9256D7CB600A86063 /* HueColourTranslator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53D155C3256D7CB400A86063 /* HueColourTranslator.swift */; };
+		53D155CA256D7CB600A86063 /* BridgeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53D155C5256D7CB400A86063 /* BridgeManager.swift */; };
+		53D155CB256D7CB600A86063 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53D155C7256D7CB400A86063 /* NetworkManager.swift */; };
+		53D155D0256D7D0D00A86063 /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53D155CF256D7D0C00A86063 /* UIColor+Extensions.swift */; };
+		53D155D7256D7D3C00A86063 /* BridgeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 53D155D4256D7D3C00A86063 /* BridgeCell.xib */; };
+		53D155D8256D7D3C00A86063 /* BridgeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53D155D5256D7D3C00A86063 /* BridgeCell.swift */; };
+		53D155DD256D83ED00A86063 /* BridgePairingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53D155DC256D83ED00A86063 /* BridgePairingViewController.swift */; };
 		53E564152506A8F400C4591F /* ColorPickerInnerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E564012506A8F400C4591F /* ColorPickerInnerViewController.swift */; };
 		53E564162506A8F400C4591F /* ColorPickerInnerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E564012506A8F400C4591F /* ColorPickerInnerViewController.swift */; };
 		53E564172506A8F400C4591F /* ColorPickerWheelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E564032506A8F400C4591F /* ColorPickerWheelView.swift */; };
@@ -259,6 +268,16 @@
 		36C0993F24A456390043250A /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5310399025041BB400CADF5C /* ThemeImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeImagePicker.swift; sourceTree = "<group>"; };
 		531039952504F59800CADF5C /* AlderisButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlderisButton.swift; sourceTree = "<group>"; };
+		5317904B256D89D1003AAB0D /* NSNotification+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSNotification+Extensions.swift"; sourceTree = "<group>"; };
+		53D155BC256D7C3600A86063 /* OdysseyUI-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "OdysseyUI-Info.plist"; sourceTree = SOURCE_ROOT; };
+		53D155C1256D7CB400A86063 /* LightManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LightManager.swift; sourceTree = "<group>"; };
+		53D155C3256D7CB400A86063 /* HueColourTranslator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HueColourTranslator.swift; sourceTree = "<group>"; };
+		53D155C5256D7CB400A86063 /* BridgeManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BridgeManager.swift; sourceTree = "<group>"; };
+		53D155C7256D7CB400A86063 /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		53D155CF256D7D0C00A86063 /* UIColor+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
+		53D155D4256D7D3C00A86063 /* BridgeCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BridgeCell.xib; sourceTree = "<group>"; };
+		53D155D5256D7D3C00A86063 /* BridgeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BridgeCell.swift; sourceTree = "<group>"; };
+		53D155DC256D83ED00A86063 /* BridgePairingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BridgePairingViewController.swift; sourceTree = "<group>"; };
 		53E564012506A8F400C4591F /* ColorPickerInnerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorPickerInnerViewController.swift; sourceTree = "<group>"; };
 		53E564022506A8F400C4591F /* Alderis.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Alderis.h; sourceTree = "<group>"; };
 		53E564032506A8F400C4591F /* ColorPickerWheelView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorPickerWheelView.swift; sourceTree = "<group>"; };
@@ -307,7 +326,6 @@
 		F14A7A8F24A6FB3500215A6F /* kmem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = kmem.h; sourceTree = "<group>"; };
 		F16AFA6B24342B9F00A7BB4F /* machoparse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = machoparse.swift; sourceTree = "<group>"; };
 		F170604F24CD53CD001596A0 /* OdysseyUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OdysseyUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		F170605524CD53CD001596A0 /* OdysseyUI-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "OdysseyUI-Info.plist"; path = "/Users/coolstar/XCode/Electra13/OdysseyUI-Info.plist"; sourceTree = "<absolute>"; };
 		F170605624CD54D4001596A0 /* electra-dummy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "electra-dummy.swift"; sourceTree = "<group>"; };
 		F170605A24CD5629001596A0 /* OdysseyUI-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "OdysseyUI-Bridging-Header.h"; sourceTree = "<group>"; };
 		F191A9BC2432A948005E0F8F /* amfidtakeover.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = amfidtakeover.swift; sourceTree = "<group>"; };
@@ -403,6 +421,85 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		53D155BD256D7C5F00A86063 /* ShadeResources */ = {
+			isa = PBXGroup;
+			children = (
+				53D155D2256D7D2B00A86063 /* View Cells */,
+				53D155CC256D7CE900A86063 /* Extensions */,
+				53D155BF256D7CB400A86063 /* Backend */,
+			);
+			path = ShadeResources;
+			sourceTree = "<group>";
+		};
+		53D155BF256D7CB400A86063 /* Backend */ = {
+			isa = PBXGroup;
+			children = (
+				53D155C0256D7CB400A86063 /* Light Manager */,
+				53D155C2256D7CB400A86063 /* Hue Colour Translator */,
+				53D155C4256D7CB400A86063 /* Bridge Manager */,
+				53D155C6256D7CB400A86063 /* Network Manager */,
+			);
+			path = Backend;
+			sourceTree = "<group>";
+		};
+		53D155C0256D7CB400A86063 /* Light Manager */ = {
+			isa = PBXGroup;
+			children = (
+				53D155C1256D7CB400A86063 /* LightManager.swift */,
+			);
+			path = "Light Manager";
+			sourceTree = "<group>";
+		};
+		53D155C2256D7CB400A86063 /* Hue Colour Translator */ = {
+			isa = PBXGroup;
+			children = (
+				53D155C3256D7CB400A86063 /* HueColourTranslator.swift */,
+			);
+			path = "Hue Colour Translator";
+			sourceTree = "<group>";
+		};
+		53D155C4256D7CB400A86063 /* Bridge Manager */ = {
+			isa = PBXGroup;
+			children = (
+				53D155C5256D7CB400A86063 /* BridgeManager.swift */,
+			);
+			path = "Bridge Manager";
+			sourceTree = "<group>";
+		};
+		53D155C6256D7CB400A86063 /* Network Manager */ = {
+			isa = PBXGroup;
+			children = (
+				53D155C7256D7CB400A86063 /* NetworkManager.swift */,
+			);
+			path = "Network Manager";
+			sourceTree = "<group>";
+		};
+		53D155CC256D7CE900A86063 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				5317904B256D89D1003AAB0D /* NSNotification+Extensions.swift */,
+				53D155CF256D7D0C00A86063 /* UIColor+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		53D155D2256D7D2B00A86063 /* View Cells */ = {
+			isa = PBXGroup;
+			children = (
+				53D155D3256D7D3C00A86063 /* Bridge Cell */,
+			);
+			path = "View Cells";
+			sourceTree = "<group>";
+		};
+		53D155D3256D7D3C00A86063 /* Bridge Cell */ = {
+			isa = PBXGroup;
+			children = (
+				53D155D4256D7D3C00A86063 /* BridgeCell.xib */,
+				53D155D5256D7D3C00A86063 /* BridgeCell.swift */,
+			);
+			path = "Bridge Cell";
+			sourceTree = "<group>";
+		};
 		53E564002506A8F400C4591F /* Alderis */ = {
 			isa = PBXGroup;
 			children = (
@@ -488,6 +585,7 @@
 		F1243085240BB358006439CC /* Odyssey */ = {
 			isa = PBXGroup;
 			children = (
+				53D155BD256D7C5F00A86063 /* ShadeResources */,
 				53E564002506A8F400C4591F /* Alderis */,
 				F191A9C024330DCD005E0F8F /* resources */,
 				F124309C240BB71D006439CC /* post-exploit */,
@@ -497,7 +595,7 @@
 				36C0993524A4560D0043250A /* Assets.xcassets */,
 				F124309D240BB72E006439CC /* Odyssey-Bridging-Header.h */,
 				F1243094240BB359006439CC /* Info.plist */,
-				F170605524CD53CD001596A0 /* OdysseyUI-Info.plist */,
+				53D155BC256D7C3600A86063 /* OdysseyUI-Info.plist */,
 				F191A9BE2432EC17005E0F8F /* BuildConfigs.xcconfig */,
 				F170605A24CD5629001596A0 /* OdysseyUI-Bridging-Header.h */,
 			);
@@ -516,6 +614,7 @@
 				36C0993924A456390043250A /* BackgroundView.swift */,
 				36C0993C24A456390043250A /* LaunchScreen.storyboard */,
 				36C0993724A456390043250A /* Main.storyboard */,
+				53D155DC256D83ED00A86063 /* BridgePairingViewController.swift */,
 				36C0993D24A456390043250A /* SceneDelegate.swift */,
 				36C0993B24A456390043250A /* ViewController.swift */,
 				F1FF240024AC946C00ACAE23 /* LogStream.swift */,
@@ -760,6 +859,7 @@
 				F1BE3B89246DE89C005E0C00 /* basebinaries.tar in Resources */,
 				36C0993624A4560D0043250A /* Assets.xcassets in Resources */,
 				F1F551E8246E6788001CE9FB /* tar.gz in Resources */,
+				53D155D7256D7D3C00A86063 /* BridgeCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -828,10 +928,13 @@
 				F1A2B43224B41AEA0087D978 /* NonceManager.swift in Sources */,
 				F13C16322436979D00194BF3 /* sethsp4.swift in Sources */,
 				360512E724B10E5700DFD3AF /* UICircularRingValueFormatter.swift in Sources */,
+				53D155CB256D7CB600A86063 /* NetworkManager.swift in Sources */,
 				F1141A0924AF145A00638BDA /* helpers.c in Sources */,
 				F12430E5240BC986006439CC /* offsets.swift in Sources */,
 				F1C8FE9024F9DE04008A551E /* offsets.m in Sources */,
 				36C0994324A456390043250A /* BackgroundView.swift in Sources */,
+				53D155D0256D7D0D00A86063 /* UIColor+Extensions.swift in Sources */,
+				53D155D8256D7D3C00A86063 /* BridgeCell.swift in Sources */,
 				53E5641B2506A8F400C4591F /* ColorPickerSeparatorView.swift in Sources */,
 				53E564272506A8F400C4591F /* ColorPickerViewController.swift in Sources */,
 				F13C16402438400C00194BF3 /* swiftUtil.swift in Sources */,
@@ -851,9 +954,11 @@
 				F1C8FE8F24F9DE04008A551E /* IOAccelerator_stuff.c in Sources */,
 				F1C8FE9124F9DE04008A551E /* exploit_utilities.c in Sources */,
 				360512E024B10E5700DFD3AF /* UICircularRing.swift in Sources */,
+				53D155DD256D83ED00A86063 /* BridgePairingViewController.swift in Sources */,
 				F1A2B43624B430760087D978 /* PanelView.swift in Sources */,
 				53E564252506A8F400C4591F /* UIColor+HBAdditions.m in Sources */,
 				F191A9BD2432A948005E0F8F /* amfidtakeover.swift in Sources */,
+				53D155C8256D7CB600A86063 /* LightManager.swift in Sources */,
 				5310399125041BB400CADF5C /* ThemeImagePicker.swift in Sources */,
 				360512E224B10E5700DFD3AF /* UICircularRingStyle.swift in Sources */,
 				933AA7C324E9D34F006182FC /* AppVersionManager.swift in Sources */,
@@ -870,9 +975,11 @@
 				F10593D424B2FA4500343F46 /* SelectionButton.swift in Sources */,
 				53E5642F2506A8F400C4591F /* ColorPickerCircleView.swift in Sources */,
 				53E564352506A8F400C4591F /* Color.swift in Sources */,
+				53179051256D89D2003AAB0D /* NSNotification+Extensions.swift in Sources */,
 				36C0994424A456390043250A /* AnimatingColourView.swift in Sources */,
 				F1FF240824AC97E500ACAE23 /* LogViewController.swift in Sources */,
 				F10593C324B29DAC00343F46 /* AvatarView.swift in Sources */,
+				53D155C9256D7CB600A86063 /* HueColourTranslator.swift in Sources */,
 				36C0994824A456390043250A /* SeparatorView.swift in Sources */,
 				360512E624B10E5700DFD3AF /* UICircularProgressRing.swift in Sources */,
 				F14A7A9024A6FB3500215A6F /* kmem.c in Sources */,
@@ -882,6 +989,7 @@
 				53E564212506A8F400C4591F /* ColorPickerSlider.swift in Sources */,
 				53E564312506A8F400C4591F /* ColorPickerTabViewController.swift in Sources */,
 				53E564192506A8F400C4591F /* ColorPickerSlidersViewController.swift in Sources */,
+				53D155CA256D7CB600A86063 /* BridgeManager.swift in Sources */,
 				F1C8FE9324F9DE04008A551E /* kernel_memory.c in Sources */,
 				F11EFF2324BA6CDD005152A8 /* ToggleView.swift in Sources */,
 				F12430DA240BC199006439CC /* electra.swift in Sources */,
@@ -1098,8 +1206,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "Apple Development";
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7J8FJX4SRX;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = Odyssey/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -1133,8 +1241,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "Apple Development";
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7J8FJX4SRX;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = Odyssey/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;

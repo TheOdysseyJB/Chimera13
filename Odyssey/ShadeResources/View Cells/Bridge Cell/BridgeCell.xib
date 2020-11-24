@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Shade.BridgeCell" rowHeight="50" id="KGk-i7-Jjw" customClass="BridgeCell" customModule="Shade" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="7.5" translatesAutoresizingMaskIntoConstraints="NO" id="X3e-lO-Rix">
+                        <rect key="frame" x="123" y="0.0" width="74" height="44"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="SGI-eD-5Kk">
+                                <rect key="frame" x="0.0" y="9.5" width="25" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="25" id="zGY-EL-8ix"/>
+                                    <constraint firstAttribute="height" constant="25" id="zxR-UT-pGH"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TeR-xT-OFS">
+                                <rect key="frame" x="32.5" y="12" width="41.5" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                    </stackView>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="X3e-lO-Rix" secondAttribute="bottom" id="4S3-Qn-Rca"/>
+                    <constraint firstItem="X3e-lO-Rix" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="5nV-Rn-ZMQ"/>
+                    <constraint firstItem="X3e-lO-Rix" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="HYf-oK-UDH"/>
+                    <constraint firstItem="X3e-lO-Rix" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="g4m-kO-2Pm"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="hueImageView" destination="SGI-eD-5Kk" id="Ait-7T-Fdf"/>
+                <outlet property="label" destination="TeR-xT-OFS" id="kRg-Oh-h5e"/>
+            </connections>
+            <point key="canvasLocation" x="131.8840579710145" y="127.90178571428571"/>
+        </tableViewCell>
+    </objects>
+</document>
