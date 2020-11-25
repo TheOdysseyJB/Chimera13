@@ -41,6 +41,16 @@ struct DiscoveredBridge {
     }
 }
 
+struct LightWithPassion {
+    var light: Light!
+    var enabled: Bool!
+    
+    init(_ light: Light!, _ enabled: Bool!) {
+        self.light = light
+        self.enabled = enabled
+    }
+}
+
 class BridgePairingViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
@@ -50,6 +60,8 @@ class BridgePairingViewController: UIViewController {
     let monitor = NWPathMonitor()
     
     var discoveredBridges = [DiscoveredBridge]()
+    var foundLights = [LightWithPassion]()
+
     var timer: Timer?
     
     override func viewDidDisappear(_ animated: Bool) {
@@ -82,11 +94,15 @@ class BridgePairingViewController: UIViewController {
         self.tableView.showsHorizontalScrollIndicator = false
         //Register the cell from nib
         self.tableView.register(UINib(nibName: "BridgeCell", bundle: nil), forCellReuseIdentifier: "Shade.BridgeCell")
+        self.tableView.register(UINib(nibName: "LightCell", bundle: nil), forCellReuseIdentifier: "Shade.LightCell")
         //Set the delegate/source
         self.tableView.delegate = self
         self.tableView.dataSource = self
         //Bouncy Boi
         self.tableView.alwaysBounceVertical = false
+        
+        self.metaReload()
+        NotificationCenter.default.addObserver(self, selector: #selector(self.metaReload), name: .LightRefactor, object: nil)
     }
     
     
@@ -160,12 +176,6 @@ class BridgePairingViewController: UIViewController {
                             }
                         } else {
                             self.discoveredBridges.remove(at: index)
-                            var hasFound = false
-                            for bridge in self.discoveredBridges {
-                                if bridge.paired {
-                                    hasFound = true
-                                }
-                            }
                             
                             self.tableView.reloadData()
                         }
@@ -183,7 +193,7 @@ class BridgePairingViewController: UIViewController {
                 DispatchQueue.main.async {
                     if success {
                         self.discoveredBridges.removeAll()
-                        if dict.count == 0 {
+                        if dict.isEmpty {
                             self.errorWith(PairingError.noneFound.error)
                             return
                         }
@@ -235,30 +245,97 @@ class BridgePairingViewController: UIViewController {
         self.timer?.invalidate()
         self.queryBridges()
     }
+    
+    @IBAction func clearPairedBridges(_ sender: Any) {
+        UserDefaults.standard.set([[String : String]](), forKey: "PairedBridges")
+        UserDefaults.standard.set([[String : String]](), forKey: "EnabledLights")
+        
+        BridgeManager.shared.bridges.removeAll()
+        LightManager.shared.lights.removeAll()
+        self.discoveredBridges.removeAll()
+        self.foundLights.removeAll()
+        self.tableView.reloadData()
+
+        self.queryBridges()
+    }
+    
+    @objc private func metaReload() {
+        self.foundLights.removeAll()
+        let discoveredLights = LightManager.shared.lights
+        let shownLights = UserDefaults.standard.object(forKey: "EnabledLights") as? [String] ?? [String]()
+        var enabledid = [String]()
+        for light in shownLights {
+            enabledid.append(light)
+        }
+        
+        for light in discoveredLights {
+            if enabledid.contains(light.uniqueid!) {
+                self.foundLights.append(LightWithPassion(light, true))
+            } else {
+                self.foundLights.append(LightWithPassion(light, false))
+            }
+        }
+        
+        DispatchQueue.main.async {
+            self.tableView.reloadData()
+        }
+    }
 }
 
 extension BridgePairingViewController : UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         //Make it invisible when you press it
+        if indexPath.section == 0 {
+            tableView.deselectRow(at: indexPath, animated: true)
+            return
+        }
+        var fancyLight = self.foundLights[indexPath.row]
+        fancyLight.enabled = !fancyLight.enabled
+        var enabledOnes = UserDefaults.standard.object(forKey: "EnabledLights") as? [String] ?? [String]()
+        if fancyLight.enabled {
+            enabledOnes.append(fancyLight.light.uniqueid!)
+        } else {
+            enabledOnes = enabledOnes.filter { $0 != fancyLight.light.uniqueid! }
+        }
+        UserDefaults.standard.set(enabledOnes, forKey: "EnabledLights")
+        self.foundLights[indexPath.row] = fancyLight
         tableView.deselectRow(at: indexPath, animated: true)
+        self.tableView.reloadData()
     }
 }
 
 extension BridgePairingViewController : UITableViewDataSource {
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 2
+    }
 
     //This is just meant to be
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.discoveredBridges.count
+        return ((section == 0) ? self.discoveredBridges.count : self.foundLights.count)
     }
     
     //This is what handles all the images and text etc, using the class mainScreenTableCells
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Shade.BridgeCell", for: indexPath) as! BridgeCell
-        
-        cell.label.text = self.discoveredBridges[indexPath.row].displayName
-        cell.hueImageView.image = UIImage(named: "BridgeIcon")
-        cell.minHeight = 50
-        
-        return cell
+        if indexPath.section == 0 {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "Shade.BridgeCell", for: indexPath) as! BridgeCell
+            cell.label.text = self.discoveredBridges[indexPath.row].displayName
+            cell.hueImageView.image = UIImage(named: "BridgeIcon")
+            
+            return cell
+        } else {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "Shade.LightCell", for: indexPath) as! LightCell
+            let fancyLight = self.foundLights[indexPath.row]
+            cell.lightLabel.text = fancyLight.light.name!
+            if fancyLight.enabled {
+                cell.lightEnabled.backgroundColor = .systemGreen
+            } else {
+                cell.lightEnabled.backgroundColor = .clear
+            }
+            cell.lightEnabled.layer.borderColor = UIColor.label.cgColor
+            cell.lightEnabled.layer.borderWidth = 1
+            
+            return cell
+        }
     }
 }

@@ -73,7 +73,6 @@ class LightManager {
             if let url = URL(string: "http://\(bridge.ip!)/api/\(bridge.username!)/lights") {
                 NetworkManager.shared.requestWithDict(url: url, method: "GET", headers: nil, jsonbody: nil, completion: { (success, dict) -> Void in
                     if success {
-                        print("[i] Refreshed light cache")
                         for (id, uwu) in dict {
                             if let light = uwu as? [String : Any] {
                                 let type = light["type"] as? String ?? "Error"
@@ -116,7 +115,7 @@ class LightManager {
                                 
                             }
                         }
-                        
+                        print("[i] Refreshed light cache, \(self.lights.count) in memory")
                         NotificationCenter.default.post(name: .LightRefactor, object: nil)
                     } else {
                         self.timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(self.grabLightsFromBridge), userInfo: nil, repeats: false)

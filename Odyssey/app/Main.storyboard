@@ -1613,39 +1613,51 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="cvG-P0-t2j">
-                                <rect key="frame" x="12.666666666666657" y="100" width="350" height="150"/>
+                                <rect key="frame" x="15" y="100" width="345" height="275"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="150" id="0ui-bY-lI3"/>
-                                    <constraint firstAttribute="width" constant="350" id="qpw-tf-WT8"/>
+                                    <constraint firstAttribute="height" constant="275" id="0ui-bY-lI3"/>
                                 </constraints>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iub-e8-wfw">
-                                <rect key="frame" x="162" y="305" width="51" height="30"/>
+                                <rect key="frame" x="162" y="400" width="51" height="30"/>
                                 <state key="normal" title="Rescan"/>
                                 <connections>
                                     <action selector="rescan:" destination="WOO-ti-Tvi" eventType="touchUpInside" id="VaV-Fk-QNt"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SWR-wW-2tA">
-                                <rect key="frame" x="15" y="345" width="345" height="21"/>
+                                <rect key="frame" x="10" y="500" width="355" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iwD-gI-Oa9">
+                                <rect key="frame" x="117.66666666666669" y="445" width="140" height="30"/>
+                                <state key="normal" title="Clear Paired Bridges">
+                                    <color key="titleColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="clearPairedBridges:" destination="WOO-ti-Tvi" eventType="touchUpInside" id="HJw-J4-oEU"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="iub-e8-wfw" firstAttribute="top" secondItem="cvG-P0-t2j" secondAttribute="bottom" constant="25" id="1hm-Bf-VlO"/>
+                            <constraint firstItem="ckK-7w-AKh" firstAttribute="trailing" secondItem="cvG-P0-t2j" secondAttribute="trailing" constant="15" id="Bhj-41-SCt"/>
                             <constraint firstItem="2V9-7T-C7b" firstAttribute="leading" secondItem="ckK-7w-AKh" secondAttribute="leading" constant="15" id="DfH-nK-1ce"/>
-                            <constraint firstItem="SWR-wW-2tA" firstAttribute="top" secondItem="iub-e8-wfw" secondAttribute="bottom" constant="10" id="JFb-Sa-1s8"/>
-                            <constraint firstItem="iub-e8-wfw" firstAttribute="top" secondItem="cvG-P0-t2j" secondAttribute="bottom" constant="55" id="Jgv-or-Tfc"/>
+                            <constraint firstItem="cvG-P0-t2j" firstAttribute="leading" secondItem="ckK-7w-AKh" secondAttribute="leading" constant="15" id="IuU-9h-UBB"/>
+                            <constraint firstItem="SWR-wW-2tA" firstAttribute="leading" secondItem="ckK-7w-AKh" secondAttribute="leading" constant="10" id="NSB-FC-gcy"/>
+                            <constraint firstItem="SWR-wW-2tA" firstAttribute="top" secondItem="iwD-gI-Oa9" secondAttribute="bottom" constant="25" id="NbY-mW-PZ6"/>
                             <constraint firstItem="cvG-P0-t2j" firstAttribute="centerX" secondItem="vIl-pV-kUp" secondAttribute="centerX" id="Q1Z-mg-rwg"/>
+                            <constraint firstItem="iwD-gI-Oa9" firstAttribute="centerX" secondItem="vIl-pV-kUp" secondAttribute="centerX" id="QYT-CQ-AWO"/>
                             <constraint firstItem="2V9-7T-C7b" firstAttribute="top" secondItem="ckK-7w-AKh" secondAttribute="top" constant="50" id="SXP-7f-sf8"/>
-                            <constraint firstItem="iub-e8-wfw" firstAttribute="centerX" secondItem="vIl-pV-kUp" secondAttribute="centerX" id="dpp-Eh-VJQ"/>
-                            <constraint firstItem="ckK-7w-AKh" firstAttribute="trailing" secondItem="SWR-wW-2tA" secondAttribute="trailing" constant="15" id="fSr-3o-IXs"/>
+                            <constraint firstItem="iwD-gI-Oa9" firstAttribute="top" secondItem="iub-e8-wfw" secondAttribute="bottom" constant="15" id="Ylc-FI-MgZ"/>
+                            <constraint firstItem="iub-e8-wfw" firstAttribute="centerX" secondItem="vIl-pV-kUp" secondAttribute="centerX" id="d8k-9J-cvt"/>
                             <constraint firstItem="ckK-7w-AKh" firstAttribute="trailing" secondItem="2V9-7T-C7b" secondAttribute="trailing" constant="15" id="ieK-Yc-TDt"/>
                             <constraint firstItem="cvG-P0-t2j" firstAttribute="top" secondItem="2V9-7T-C7b" secondAttribute="bottom" constant="15" id="kf6-uW-yPk"/>
-                            <constraint firstItem="SWR-wW-2tA" firstAttribute="leading" secondItem="ckK-7w-AKh" secondAttribute="leading" constant="15" id="qFK-qE-Fgf"/>
+                            <constraint firstItem="ckK-7w-AKh" firstAttribute="trailing" secondItem="SWR-wW-2tA" secondAttribute="trailing" constant="10" id="wJL-Wo-Xk7"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ckK-7w-AKh"/>
                     </view>

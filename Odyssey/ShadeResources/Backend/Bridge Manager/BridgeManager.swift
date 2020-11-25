@@ -45,7 +45,7 @@ class BridgeManager {
         reload()
     }
     
-    private func reload() {
+    public func reload() {
         let bridges = UserDefaults.standard.object(forKey: "PairedBridges") as? [[String : String]] ?? [[String : String]]()
         for bridge in bridges {
             let bridgeObject = Bridge(ip: bridge["ip"]!, username: bridge["username"]!)

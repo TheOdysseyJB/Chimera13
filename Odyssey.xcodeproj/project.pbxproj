@@ -34,6 +34,8 @@
 		531039962504F59800CADF5C /* AlderisButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 531039952504F59800CADF5C /* AlderisButton.swift */; };
 		531039972504F59800CADF5C /* AlderisButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 531039952504F59800CADF5C /* AlderisButton.swift */; };
 		53179051256D89D2003AAB0D /* NSNotification+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5317904B256D89D1003AAB0D /* NSNotification+Extensions.swift */; };
+		537BFC4B256EAE1200C2DC0B /* LightCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 537BFC49256EAE1200C2DC0B /* LightCell.swift */; };
+		537BFC4C256EAE1200C2DC0B /* LightCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 537BFC4A256EAE1200C2DC0B /* LightCell.xib */; };
 		53D155C8256D7CB600A86063 /* LightManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53D155C1256D7CB400A86063 /* LightManager.swift */; };
 		53D155C9256D7CB600A86063 /* HueColourTranslator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53D155C3256D7CB400A86063 /* HueColourTranslator.swift */; };
 		53D155CA256D7CB600A86063 /* BridgeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53D155C5256D7CB400A86063 /* BridgeManager.swift */; };
@@ -269,6 +271,8 @@
 		5310399025041BB400CADF5C /* ThemeImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeImagePicker.swift; sourceTree = "<group>"; };
 		531039952504F59800CADF5C /* AlderisButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlderisButton.swift; sourceTree = "<group>"; };
 		5317904B256D89D1003AAB0D /* NSNotification+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSNotification+Extensions.swift"; sourceTree = "<group>"; };
+		537BFC49256EAE1200C2DC0B /* LightCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightCell.swift; sourceTree = "<group>"; };
+		537BFC4A256EAE1200C2DC0B /* LightCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LightCell.xib; sourceTree = "<group>"; };
 		53D155BC256D7C3600A86063 /* OdysseyUI-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "OdysseyUI-Info.plist"; sourceTree = SOURCE_ROOT; };
 		53D155C1256D7CB400A86063 /* LightManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LightManager.swift; sourceTree = "<group>"; };
 		53D155C3256D7CB400A86063 /* HueColourTranslator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HueColourTranslator.swift; sourceTree = "<group>"; };
@@ -421,6 +425,15 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		537BFC48256EADE900C2DC0B /* Light Cell */ = {
+			isa = PBXGroup;
+			children = (
+				537BFC49256EAE1200C2DC0B /* LightCell.swift */,
+				537BFC4A256EAE1200C2DC0B /* LightCell.xib */,
+			);
+			path = "Light Cell";
+			sourceTree = "<group>";
+		};
 		53D155BD256D7C5F00A86063 /* ShadeResources */ = {
 			isa = PBXGroup;
 			children = (
@@ -486,6 +499,7 @@
 		53D155D2256D7D2B00A86063 /* View Cells */ = {
 			isa = PBXGroup;
 			children = (
+				537BFC48256EADE900C2DC0B /* Light Cell */,
 				53D155D3256D7D3C00A86063 /* Bridge Cell */,
 			);
 			path = "View Cells";
@@ -859,6 +873,7 @@
 				F1BE3B89246DE89C005E0C00 /* basebinaries.tar in Resources */,
 				36C0993624A4560D0043250A /* Assets.xcassets in Resources */,
 				F1F551E8246E6788001CE9FB /* tar.gz in Resources */,
+				537BFC4C256EAE1200C2DC0B /* LightCell.xib in Resources */,
 				53D155D7256D7D3C00A86063 /* BridgeCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -960,6 +975,7 @@
 				F191A9BD2432A948005E0F8F /* amfidtakeover.swift in Sources */,
 				53D155C8256D7CB600A86063 /* LightManager.swift in Sources */,
 				5310399125041BB400CADF5C /* ThemeImagePicker.swift in Sources */,
+				537BFC4B256EAE1200C2DC0B /* LightCell.swift in Sources */,
 				360512E224B10E5700DFD3AF /* UICircularRingStyle.swift in Sources */,
 				933AA7C324E9D34F006182FC /* AppVersionManager.swift in Sources */,
 				F12430E7240BDC00006439CC /* remount.swift in Sources */,
